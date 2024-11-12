@@ -1,13 +1,24 @@
 {
   "dependencies": {
+    "@babel/cli": "^7.18.10",
+    "@babel/core": "^7.18.10",
+    "@babel/node": "^7.18.10",
+    "@babel/preset-env": "^7.18.10",
+    "axios": "^0.27.2",
     "chalk": "^5.0.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "mongodb": "^4.8.1",
+    "mongoose": "^6.5.2",
+    "validator": "^13.7.0",
     "yargs": "^17.5.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.19"
   },
   "scripts": {
-    "dev-server": "nodemon server.mjs"
+    "build": "babel server2.mjs -d dist",
+    "dev-server": "nodemon --exec babel-node server2.mjs"
   },
   "name": "edureka-nodejs-demo",
   "version": "0.0.1",
